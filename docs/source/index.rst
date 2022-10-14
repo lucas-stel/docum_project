@@ -1,12 +1,6 @@
 Docum Project - Welcome
 =======================
 
-
-.. image:: images/sphinx.jpg
-   :scale: 50 %
-   :align: center
-
-
 **Docum Project** is a little project to understand how its
 works sphinx and to practice the syntax of *rest* files.
 
