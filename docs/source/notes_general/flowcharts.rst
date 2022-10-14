@@ -83,12 +83,12 @@ The corresponding code in *.dot* is,
  
     }
 
-To understand the code, we can divide it in three sections, and for that is possible to use a graph:
+To understand the code, we can divide it in three sections:
 
 .. figure:: images/flowchart_b.png
    :align: center
    
-   *Chart of a chart*
+   *A graph to explain other graph*
    
 For each instance is possible define format, rank, labes, etc.
 

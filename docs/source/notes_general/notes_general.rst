@@ -8,7 +8,6 @@ Using the `quickstart <https://www.sphinx-doc.org/en/master/usage/quickstart.htm
 
 
 .. figure:: images/screen_sphinxdoc.png
-   :scale: 50 %
    :align: center
    :target: https://www.sphinx-doc.org/en/master/usage/quickstart.html
    
@@ -72,16 +71,13 @@ And then is necessary modify the file conf.py:
    
 In this `section <https://pradyunsg.me/furo/customisation>`_ is possible to read about customisation of furo.
 
-Headers
--------
-
-Below a title we can use for example **===**, **---** or **...** to define different styles (like h1 in html5).
-
 
 References
 ----------
 
-There many pages about sintax and how to configure sphinx, for example: `Sourceforge <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quick-syntax-overview>`_, `Sphinx-doc <https://sphinx-doc.org/en/master/usage/restructuredtext/basics.html#quick-syntax-overview>`_, `Typo3 <https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Index.html>`_, `IntroSphinx <https://sphinx-intro-tutorial.readthedocs.io/en/latest/index.html>`_ and `Sublime/Sphinx <https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html#quick-syntax-overview>`_. 
+Below a title we can use for example **===**, **---** or **...** to define different styles (like h1 in html5).
+
+There many pages about syntax and how to configure sphinx, for example: `Sourceforge <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quick-syntax-overview>`_, `Sphinx-doc <https://sphinx-doc.org/en/master/usage/restructuredtext/basics.html#quick-syntax-overview>`_, `Typo3 <https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Index.html>`_, `IntroSphinx <https://sphinx-intro-tutorial.readthedocs.io/en/latest/index.html>`_ and `Sublime/Sphinx <https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html#quick-syntax-overview>`_. 
 
 Videos
 -------

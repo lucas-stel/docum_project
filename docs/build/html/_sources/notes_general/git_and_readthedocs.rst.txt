@@ -72,9 +72,10 @@ Follow this path has some advantages:
 - I get used to using git, Github, the terminal, sphinx, several things at the same time, etc.
 - I can really see the utility of track changes using a VSC.
 
-
-
-
+.. figure:: images/gitandreadthedocs_3.png
+   :align: center
+   
+   *Track of each change in the project*
 
 
 
