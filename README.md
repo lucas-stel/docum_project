@@ -2,7 +2,7 @@
 
 ## Info
 
-This is the repository of the project **Docum Project**, this project is edited from a local pc and it is necessary to work with *readthefiles*.
+This is the repository of the project **Docum Project**.
 
 ## Important sites
 
@@ -15,5 +15,5 @@ Some important sites for this project are:
 
 # Disclaimer
 
-This projects has the purpose of understand how its works sphinx, git, etc. [In case of problems:](http://www.koalastothemax.com/).
+This projects has the purpose of understand how its works sphinx, git, etc. [In case of problems](http://www.koalastothemax.com/).
 

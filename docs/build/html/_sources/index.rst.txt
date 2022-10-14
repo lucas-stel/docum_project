@@ -2,7 +2,7 @@ Docum Project
 =============
 
 Welcome
-_______
+-------
 
 **Docum Project** is a little project to keep track of daily work.
 
