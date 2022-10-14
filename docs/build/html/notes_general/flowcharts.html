@@ -1,0 +1,396 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="Working with sphinx - PartB" href="notes_general_b.html" />
+
+    <meta name="generator" content="sphinx-5.2.3, furo 2022.09.29"/>
+        <title>Flowcharts - Graphviz and Mermaid - Docum Project 0.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Docum Project 0.2 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">Docum Project 0.2 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">General notes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="notes_general_a.html">Working with sphinx - Part A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes_general_b.html">Working with sphinx - PartB</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Flowcharts - Graphviz and Mermaid</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="flowcharts-graphviz-and-mermaid">
+<h1>Flowcharts - Graphviz and Mermaid<a class="headerlink" href="#flowcharts-graphviz-and-mermaid" title="Permalink to this heading">#</a></h1>
+<section id="graphviz">
+<h2>Graphviz<a class="headerlink" href="#graphviz" title="Permalink to this heading">#</a></h2>
+<p>This is an example of a flowchart using graphviz</p>
+<figure class="align-center" id="id1">
+<a class="reference external image-reference" href="https://sketchviz.com/&#64;lstel/750382b0b0c0045b9c725336921a7774/44219008a1fb4fe2141d5a399729d70ed8008845.sketchy.png"><img alt="../_images/flowchart_a.png" src="../_images/flowchart_a.png" style="width: 395.0px; height: 727.5px;" /></a>
+<figcaption>
+<p><span class="caption-text"><em>An example using graphviz - click to see better.</em></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The corresponding code in <em>.dot</em> is,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span><span class="c1">## Normal work in git/gitlab ####</span>
+
+<span class="go"> digraph L {</span>
+<span class="gp"> # </span>General settings
+<span class="go"> node [fontname = &quot;Handlee&quot;];</span>
+<span class="go"> splines=false;</span>
+<span class="go"> bgcolor=transparent;</span>
+
+<span class="gp"> # </span>Blocks
+<span class="go"> subgraph cluster_local1 {</span>
+<span class="go"> label = &quot;*Local part#1*&quot;;</span>
+<span class="go"> fontsize = 20;</span>
+<span class="go"> color=blue</span>
+<span class="go"> step1 [ label = &quot;Create new\n local branch&quot;, shape=block];</span>
+<span class="go"> step2 [ label = &quot;Edit a file/s&quot;, shape=block];</span>
+<span class="go"> step3 [ label = &quot;Add the file/s to\n staging area&quot;, shape=block];</span>
+<span class="go"> step4 [ label = &quot;Make the commit&quot;, shape=block];</span>
+<span class="go"> step5 [ label = &quot;Push new local branch\n to remote repository&quot;, shape=block];</span>
+<span class="go"> }</span>
+<span class="go"> subgraph cluster_remote {</span>
+<span class="go"> label = &quot;*GitLab                   part#2*&quot;;</span>
+<span class="go"> fontsize = 20;</span>
+<span class="go"> color=red</span>
+<span class="go"> step6 [ label = &quot;Create\n merge request\n on GitLab&quot;, shape=block];</span>
+<span class="go"> step7 [ label = &quot;Is the merge\n request\n approved?&quot;, shape=Mdiamond];</span>
+<span class="go"> step8 [ label = &quot;So wait..&quot;, shape=block];</span>
+<span class="go">     {</span>
+<span class="go">     rank=same;</span>
+<span class="go">     step6; step7; step8;</span>
+<span class="go">     }</span>
+<span class="go"> }</span>
+<span class="go"> subgraph cluster_local2 {</span>
+<span class="go"> label = &quot;*Local          part#3*&quot;;</span>
+<span class="go"> fontsize = 20;</span>
+<span class="go"> color=green</span>
+<span class="go"> step9 [ label = &quot;Checkout master branch locally&quot;, shape=block];</span>
+<span class="go"> step10 [ label = &quot;Make a pull&quot;, shape=block];</span>
+<span class="go"> step11 [ label = &quot;Delete (old) new-branch&quot;, shape=block];</span>
+<span class="go"> }</span>
+
+<span class="gp"> # </span>Steps
+<span class="go"> step1 -&gt; step2 -&gt; step3 -&gt; step4 -&gt; step5;</span>
+<span class="go"> step5 -&gt; step6 -&gt; step7;</span>
+<span class="go"> step7 -&gt; step9 [label = &quot;Yes&quot;; fontname = &quot;Handlee&quot;];</span>
+<span class="go"> step7 -&gt; step8 [label = &quot;No&quot;; fontname = &quot;Handlee&quot;];</span>
+<span class="go"> step9 -&gt; step10 -&gt; step11;</span>
+
+<span class="gp"> # </span>Something extra to <span class="k">do</span> the loop line <span class="k">in</span> the check box
+<span class="go"> {</span>
+<span class="go"> rank=same;</span>
+<span class="go"> guess2; point2;</span>
+<span class="go"> }</span>
+<span class="go"> guess2 [</span>
+<span class="go">   label = &quot;              &quot;;</span>
+<span class="go">   color= white ;</span>
+<span class="go"> ];</span>
+<span class="go"> point2 [</span>
+<span class="go">   label = &quot;                                       &quot;;</span>
+<span class="go">   color=white;</span>
+<span class="go"> ];</span>
+<span class="go"> step8:n -&gt; point2:n [ arrowhead = none ];</span>
+<span class="go"> guess2:n -&gt; point2:n [ arrowhead = none ];</span>
+<span class="go"> guess2:n -&gt; step7:n;</span>
+
+<span class="go"> }</span>
+</pre></div>
+</div>
+<p>To understand the code, we can divide it in three sections, and for that is possible to use a graph:</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/flowchart_b.png" src="../_images/flowchart_b.png" />
+<figcaption>
+<p><span class="caption-text"><em>Chart of a chart</em></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For each instance is possible define format, rank, labes, etc.</p>
+</section>
+<section id="mermaid">
+<h2>Mermaid<a class="headerlink" href="#mermaid" title="Permalink to this heading">#</a></h2>
+<p>Other tool to do flowcharts is Mermaid writing in markdown:</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/flowchart_c.png" src="../_images/flowchart_c.png" />
+<figcaption>
+<p><span class="caption-text"><em>An example using mermaid.</em></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The corresponding code in <em>.md</em> is,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span><span class="c1"># Mixing flowchart + md files</span>
+
+<span class="go">- How I tried to do a flowchart in Graphviz :sweat: :sweat: :sweat:</span>
+<span class="go">- Testing **mermaid**</span>
+
+<span class="go">---</span>
+
+<span class="go">```mermaid</span>
+
+<span class="go"> flowchart TB</span>
+<span class="go"> AA[I started today in the morning] --&gt; A[I recived the infomation]</span>
+
+<span class="go"> subgraph ide1 [ ]</span>
+<span class="go"> A--&gt; B[I read the documentation]</span>
+<span class="go"> B --&gt; C[I read the examples and I played with them]</span>
+<span class="go"> C --&gt; D{I started a flowchart}</span>
+<span class="go"> D --&gt;|First..| E[I tried to understand the syntax]</span>
+<span class="go"> D --&gt;|..and then| F[I did some test]</span>
+<span class="go"> E --&gt; G[Some things went well other went not so well]</span>
+<span class="go"> F --&gt; G[Some things went well other went not so well]</span>
+<span class="go"> G --&gt; H{{I continued}}</span>
+<span class="go"> H --&gt; I(((I uploaded the files)))</span>
+
+<span class="go"> end</span>
+<span class="go"> ```</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="notes_general_b.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Working with sphinx - PartB</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Lucas
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Flowcharts - Graphviz and Mermaid</a><ul>
+<li><a class="reference internal" href="#graphviz">Graphviz</a></li>
+<li><a class="reference internal" href="#mermaid">Mermaid</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    </body>
+</html>
