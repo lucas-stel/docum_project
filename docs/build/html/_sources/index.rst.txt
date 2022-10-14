@@ -19,10 +19,10 @@ Contents
    :titlesonly:
    :caption: General notes
       
-   notes_general/notes_general_a
-   notes_general/notes_general_b
+   notes_general/notes_general
    notes_general/flowcharts
    noteb_jupiter/test_jupiter.ipynb
+   notes_general/git_and_readthedocs
 
 .. toctree::
    :titlesonly:

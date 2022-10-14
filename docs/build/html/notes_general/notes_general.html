@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Flowcharts - Graphviz and Mermaid" href="flowcharts.html" /><link rel="prev" title="Working with sphinx - Part A" href="notes_general_a.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Flowcharts - Graphviz and Mermaid" href="flowcharts.html" /><link rel="prev" title="Docum Project - Welcome" href="../index.html" />
 
     <meta name="generator" content="sphinx-5.2.3, furo 2022.09.29"/>
-        <title>Working with sphinx - Part B - Docum Project 0.2 documentation</title>
+        <title>Working with sphinx - Docum Project 0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -156,8 +156,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">General notes</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="notes_general_a.html">Working with sphinx - Part A</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Working with sphinx - Part B</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Working with sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Flowcharts - Graphviz and Mermaid</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../noteb_jupiter/test_jupiter.html">Jupiter Notebook and sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="git_and_readthedocs.html">Git and ReadTheDocs</a></li>
@@ -200,8 +199,54 @@
           </label>
         </div>
         <article role="main">
-          <section id="working-with-sphinx-part-b">
-<h1>Working with sphinx - Part B<a class="headerlink" href="#working-with-sphinx-part-b" title="Permalink to this heading">#</a></h1>
+          <section id="working-with-sphinx">
+<h1>Working with sphinx<a class="headerlink" href="#working-with-sphinx" title="Permalink to this heading">#</a></h1>
+<section id="creation-of-a-sphinx-project">
+<h2>Creation of a sphinx project<a class="headerlink" href="#creation-of-a-sphinx-project" title="Permalink to this heading">#</a></h2>
+<p>Using the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/quickstart.html">quickstart</a> guide is possible create a first project in sphinx just following the instructions.</p>
+<figure class="align-center" id="id1">
+<a class="reference external image-reference" href="https://www.sphinx-doc.org/en/master/usage/quickstart.html"><img alt="../_images/screen_sphinxdoc.png" src="../_images/screen_sphinxdoc.png" style="width: 590.0px; height: 313.5px;" /></a>
+<figcaption>
+<p><span class="caption-text"><em>Print of the site</em></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The first steps of the process are:</p>
+<ul class="simple">
+<li><p>Creation of a folder for the project and a file <em>readme</em> in .rst.</p></li>
+<li><p>Creation of a python virtual environment.</p></li>
+<li><p>Installation of tools (sphinx).</p></li>
+<li><p>Running of quick configuration.</p></li>
+<li><p>Render doc like html.</p></li>
+<li><p>Customization.</p></li>
+</ul>
+</section>
+<section id="some-commands">
+<h2>Some commands<a class="headerlink" href="#some-commands" title="Permalink to this heading">#</a></h2>
+<p>There are some commands that its necessary use each time, for example:</p>
+<ul class="simple">
+<li><p>Start sphinx from the terminal</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> .venv/bin/activate
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Reflect changes</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> docs
+<span class="gp">$ </span>make html
+</pre></div>
+</div>
+<div class="admonition-watch-out admonition">
+<p class="admonition-title">Watch out</p>
+<p>This part is very important to see errors.</p>
+</div>
+<ul class="simple">
+<li><p>Check version</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-build --version
+</pre></div>
+</div>
+</section>
 <section id="themes">
 <h2>Themes<a class="headerlink" href="#themes" title="Permalink to this heading">#</a></h2>
 <p>Its possible install and set different themes for a sphinx project, and it is possible to modify them.</p>
@@ -243,14 +288,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="notes_general_a.html">
+          <a class="prev-page" href="../index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Working with sphinx - Part A</div>
+                <div class="title">Home</div>
                 
               </div>
             </a>
@@ -286,7 +331,9 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Working with sphinx - Part B</a><ul>
+<li><a class="reference internal" href="#">Working with sphinx</a><ul>
+<li><a class="reference internal" href="#creation-of-a-sphinx-project">Creation of a sphinx project</a></li>
+<li><a class="reference internal" href="#some-commands">Some commands</a></li>
 <li><a class="reference internal" href="#themes">Themes</a></li>
 <li><a class="reference internal" href="#headers">Headers</a></li>
 <li><a class="reference internal" href="#references">References</a></li>

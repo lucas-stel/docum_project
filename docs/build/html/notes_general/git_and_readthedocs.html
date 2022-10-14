@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Flowcharts - Graphviz and Mermaid" href="flowcharts.html" /><link rel="prev" title="Working with sphinx - Part A" href="notes_general_a.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Week 41" href="../week_notes/week41.html" /><link rel="prev" title="Jupiter Notebook and sphinx" href="../noteb_jupiter/test_jupiter.html" />
 
     <meta name="generator" content="sphinx-5.2.3, furo 2022.09.29"/>
-        <title>Working with sphinx - Part B - Docum Project 0.2 documentation</title>
+        <title>Git and ReadTheDocs - Docum Project 0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -157,10 +157,10 @@
   <p class="caption" role="heading"><span class="caption-text">General notes</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="notes_general_a.html">Working with sphinx - Part A</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Working with sphinx - Part B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes_general_b.html">Working with sphinx - Part B</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flowcharts.html">Flowcharts - Graphviz and Mermaid</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../noteb_jupiter/test_jupiter.html">Jupiter Notebook and sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git_and_readthedocs.html">Git and ReadTheDocs</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Git and ReadTheDocs</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Week notes</span></p>
 <ul>
@@ -200,33 +200,69 @@
           </label>
         </div>
         <article role="main">
-          <section id="working-with-sphinx-part-b">
-<h1>Working with sphinx - Part B<a class="headerlink" href="#working-with-sphinx-part-b" title="Permalink to this heading">#</a></h1>
-<section id="themes">
-<h2>Themes<a class="headerlink" href="#themes" title="Permalink to this heading">#</a></h2>
-<p>Its possible install and set different themes for a sphinx project, and it is possible to modify them.</p>
-<p>For example with _furo_ theme:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install furo
+          <section id="git-and-readthedocs">
+<h1>Git and ReadTheDocs<a class="headerlink" href="#git-and-readthedocs" title="Permalink to this heading">#</a></h1>
+<section id="first-steps">
+<h2>First steps<a class="headerlink" href="#first-steps" title="Permalink to this heading">#</a></h2>
+<p>In order to use ReadTheDocs I try to used one of my repositories in my GitLab account, but because Im in a private group and ReadTheDocs (free) only works with public repository, that didnt work.</p>
+<p>Then I created a repo in a free account in GitHub, and use the protocol SSH and my public key to link my pc with GitHub. At this moment, I can work with Github and GitLab at the same time.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/gitandreadthedocs_1.png" src="../_images/gitandreadthedocs_1.png" />
+<figcaption>
+<p><span class="caption-text"><em>Capture using the command remote</em></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Finally, I cloned the repository and I put the sphinx project in the folder.</p>
+</section>
+<section id="using-readthedocs">
+<h2>Using ReadTheDocs<a class="headerlink" href="#using-readthedocs" title="Permalink to this heading">#</a></h2>
+<p>Before going to the site of Read its necessary create the files <em>readthedocs.yml</em> and <em>requeriments.txt</em> in our repo directory. They work together to specificate the extensions, packages, themes, etc, that will be required by the project.</p>
+<p>The position and code of each one are:</p>
+<ul class="simple">
+<li><p>I - <em>readthedocs.yml</em>:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nameproject/readthedocs.yml</span>
 </pre></div>
 </div>
-<p>And then is necessary modify the file conf.py:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">html_theme = &quot;furo&quot;</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+<span class="nt">formats</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="w"></span>
+<span class="nt">python</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<span class="w">  </span><span class="nt">install</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">requirements</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs/requirements.txt</span><span class="w"></span>
+<span class="nt">system_packages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </pre></div>
 </div>
-<p>In this <a class="reference external" href="https://pradyunsg.me/furo/customisation">section</a> is possible to read about customisation of furo.</p>
+<ul class="simple">
+<li><p>II - requeriments.txt*:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nameproject/docs/requeriments.txt</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ipykernel
+nbsphinx
+furo
+etc, etc, etc.
+</pre></div>
+</div>
+<p>When this files are in position with its specifications its possible start the upload of the repo in the site of Read. Here is a good <a class="reference external" href="https://www.youtube.com/watch?v=CqR1b0Y-o5k&amp;t=2s">quick start guide</a> of the process.</p>
 </section>
-<section id="headers">
-<h2>Headers<a class="headerlink" href="#headers" title="Permalink to this heading">#</a></h2>
-<p>Below a title we can use for example <strong>===</strong>, <strong>—</strong> or <strong>…</strong> to define different styles (like h1 in html5).</p>
+<section id="final-dynamic">
+<h2>Final dynamic<a class="headerlink" href="#final-dynamic" title="Permalink to this heading">#</a></h2>
+<p>Finally to update the site of the project I have to work with sphinx and GitHub:</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/gitandreadthedocs_2.png" src="../_images/gitandreadthedocs_2.png" />
+<figcaption>
+<p><span class="caption-text"><em>Dynamic</em></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Follow this path has some advantages:</p>
+<ul class="simple">
+<li><p>Keep the site update.</p></li>
+<li><p>I get used to using git, Github, the terminal, sphinx, several things at the same time, etc.</p></li>
+<li><p>I can really see the utility of track changes using a VSC.</p></li>
+</ul>
 </section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<p>There many pages about sintax and how to configure sphinx, for example: <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quick-syntax-overview">Sourceforge</a>, <a class="reference external" href="https://sphinx-doc.org/en/master/usage/restructuredtext/basics.html#quick-syntax-overview">Sphinx-doc</a>, <a class="reference external" href="https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Index.html">Typo3</a>, <a class="reference external" href="https://sphinx-intro-tutorial.readthedocs.io/en/latest/index.html">IntroSphinx</a> and <a class="reference external" href="https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html#quick-syntax-overview">Sublime/Sphinx</a>.</p>
-</section>
-<section id="videos">
-<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h2>
-<p>Is possible to insert youtube videos -<em>inframe</em>- like this of good music:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qSeg69d3CQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
 </section>
 
         </article>
@@ -234,23 +270,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="flowcharts.html">
+          <a class="next-page" href="../week_notes/week41.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Flowcharts - Graphviz and Mermaid</div>
+                <div class="title">Week 41</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="notes_general_a.html">
+          <a class="prev-page" href="../noteb_jupiter/test_jupiter.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Working with sphinx - Part A</div>
+                <div class="title">Jupiter Notebook and sphinx</div>
                 
               </div>
             </a>
@@ -286,11 +322,10 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Working with sphinx - Part B</a><ul>
-<li><a class="reference internal" href="#themes">Themes</a></li>
-<li><a class="reference internal" href="#headers">Headers</a></li>
-<li><a class="reference internal" href="#references">References</a></li>
-<li><a class="reference internal" href="#videos">Videos</a></li>
+<li><a class="reference internal" href="#">Git and ReadTheDocs</a><ul>
+<li><a class="reference internal" href="#first-steps">First steps</a></li>
+<li><a class="reference internal" href="#using-readthedocs">Using ReadTheDocs</a></li>
+<li><a class="reference internal" href="#final-dynamic">Final dynamic</a></li>
 </ul>
 </li>
 </ul>
