@@ -1,16 +1,15 @@
 Docum Project - Welcome
 =======================
 
-**Docum Project** is a little project to understand how its
-works sphinx and to practice the syntax of *rest* files.
+**Docum Project** is a little project to keep track of daily work.
 
-Secondaries objectives are improve the use of the terminal, python, etc. 
+Secondary goals are improve the use of the terminal, python, git, notebooks, sphinx, etc. 
 
 
 Documentation
 -------------
 
-Here is possible to find documentation of the weekly work, each one explain the advances, problems, etc. Also some note about sphinx.
+In the first section, there are some notes to remember some things. And in the second section, there are the reports of each week, and also some notes to remember some things.
 
 
 Contents
