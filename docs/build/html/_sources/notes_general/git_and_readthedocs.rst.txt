@@ -53,6 +53,11 @@ The position and code of each one are:
    furo
    etc, etc, etc.
   
+.. figure:: images/gitandreadthedocs_4.png
+   :align: center
+
+   *Position of each file*
+
 When this files are in position with its specifications its possible start the upload of the repo in the site of Read. Here is a good `quick start guide <https://www.youtube.com/watch?v=CqR1b0Y-o5k&t=2s>`_ of the process.
   
 
@@ -70,19 +75,15 @@ Follow this path has some advantages:
 
 - Keep the site update.
 - I get used to using git, Github, the terminal, sphinx, several things at the same time, etc.
+- Read allow generate a *pdf* file of the site.
 - I can really see the utility of track changes using a VSC.
 
 .. figure:: images/gitandreadthedocs_3.png
    :align: center
    
-   *Track of each change in the project*
-
-
-
-
-
-
-
-
-
-
+   *Track in time of each change in the project*
+   
+.. figure:: images/gitandreadthedocs_5.png
+   :align: center
+   
+   *The details of the changes of each file*
