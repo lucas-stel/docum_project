@@ -14,7 +14,6 @@ release = '0.2'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-
 extensions = ['sphinx.ext.duration', "nbsphinx"]
 
 source_suffix = [".rst", ".md"]
@@ -22,9 +21,12 @@ templates_path = ['_templates']
 exclude_patterns = []
 
 
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
 html_static_path = ['_static']
+
+# -- Option custmos css, js, etc. ---------------------------------------------
+#html_css_files = ['_css/custom.css']
+#html_js_files = ['_js/custom.js']
