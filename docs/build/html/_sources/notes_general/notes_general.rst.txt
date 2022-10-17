@@ -79,10 +79,10 @@ Below a title we can use for example **===**, **---** or **...** to define diffe
 
 There many pages about syntax and how to configure sphinx, for example: `Sourceforge <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quick-syntax-overview>`_, `Sphinx-doc <https://sphinx-doc.org/en/master/usage/restructuredtext/basics.html#quick-syntax-overview>`_, `Typo3 <https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Index.html>`_, `IntroSphinx <https://sphinx-intro-tutorial.readthedocs.io/en/latest/index.html>`_ and `Sublime/Sphinx <https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html#quick-syntax-overview>`_. 
 
-Inframes
---------
+Iframe
+------
 
-Is possible to work with *inframes* and insert youtube videos, maps, etc.
+Is possible to work with *iframes* and insert videos, maps, etc.
 
 - A video:
 

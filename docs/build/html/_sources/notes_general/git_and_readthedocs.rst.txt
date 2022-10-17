@@ -66,10 +66,11 @@ Final dynamic
 
 Finally to update the site of the project I have to work with sphinx and GitHub:
 
-.. figure:: images/gitandreadthedocs_2.png
-   :align: center
+.. raw:: html 
    
-   *Dynamic*
+   <embed>
+   <div align="center"><a href='//sketchviz.com/@lucas-stel/688c59269c40338293d9810010989d8b'><img src='https://sketchviz.com/@lucas-stel/688c59269c40338293d9810010989d8b/8fd529129db4f54e9bcb4c6409290dee13e32153.sketchy.png' style='max-width: 100%;'></a><br/><span style='font-size: 80%;color:#555;'>Hosted on <a href='//sketchviz.com/' style='color:#555;'>Sketchviz</a></span></div>
+   </embed>
 
 Follow this path has some advantages:
 

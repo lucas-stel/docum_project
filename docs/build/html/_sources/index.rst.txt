@@ -30,7 +30,8 @@ Contents
 .. toctree::
    :titlesonly:
    :caption: Week reports
-   
+
+   week_notes/week42
    week_notes/week41
    week_notes/week40
 
