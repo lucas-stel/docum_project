@@ -79,12 +79,19 @@ Below a title we can use for example **===**, **---** or **...** to define diffe
 
 There many pages about syntax and how to configure sphinx, for example: `Sourceforge <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quick-syntax-overview>`_, `Sphinx-doc <https://sphinx-doc.org/en/master/usage/restructuredtext/basics.html#quick-syntax-overview>`_, `Typo3 <https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Index.html>`_, `IntroSphinx <https://sphinx-intro-tutorial.readthedocs.io/en/latest/index.html>`_ and `Sublime/Sphinx <https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html#quick-syntax-overview>`_. 
 
-Videos
--------
+Inframes
+--------
 
-Is possible to insert youtube videos -*inframe*- like this of good music:
+Is possible to work with *inframes* and insert youtube videos, maps, etc.
+
+- A video:
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/qSeg69d3CQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- A map:
 
 .. raw:: html
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/qSeg69d3CQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1599.5302708819668!2d-58.66936318331816!3d-62.238017447106365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc73f69ea1c4004f%3A0xb3b36931097b43fc!2sCarlini%20Base%2C%20Antarctica!5e1!3m2!1sen!2sch!4v1666006272358!5m2!1sen!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
