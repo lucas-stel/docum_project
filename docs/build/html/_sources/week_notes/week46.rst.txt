@@ -1,0 +1,39 @@
+Week 46
+=======
+
+.. raw:: html
+   
+   <embed>
+   <div align="center"><a href='//sketchviz.com/@lucas-stel/e87e6fc60afce93252cbdbf98f7536b1'><img src='https://sketchviz.com/@lucas-stel/e87e6fc60afce93252cbdbf98f7536b1/0e5232ddba8df4da7545554b218f914b14905858.sketchy.png' style='max-width: 100%;'></a><br/><span style='font-size: 80%;color:#555;'>Hosted on <a href='//sketchviz.com/' style='color:#555;'>Sketchviz</a></span></div>
+   </embed>
+
+Process automation
+------------------
+We discussed about:
+
+- What are the steps in the process to obtain a volume straightened from a DICOM data set. Some are manuals and other automatics.
+- Each step is done by a module of the soft 3dSlicer. The idea is automate the entiere process as much we can. This soft provide tools to create modules in order to put those modules/steps in one only one.
+- The data set DICOM provides different images and data in function of the study for each patient. For the process is necessary to select specific data following some specific criteria, in terms of quality, for example.
+
+Modules in 3dSlicer
+-------------------
+
+Concepts
+--------
+Before to start with the creation of modules, first is necessary understand the structure and archecture of them:
+
+- Each function in 3dslicer is a module, and the collection of modules are an extension. Normally, we create first an extension and then one, two, modules for all the process. There is some specific extension call *Wizard Extension* to create the extensions in a easy way.
+- The modules can be written in c++, cli or py. The documentation of the soft explain just py. 
+- The conception of the module requires (and the soft provides) the utilization of some specific libraries like *numpy* for the math operation, *Qt* for the user interface, and *Vtk, Ctk* and *Itk* for the displaying and processing medical images. 
+- The code in python of the module is dived in three section like classes; metadata, widgets and logic. First, the class metadata show names, info about the module, help text, etc. Then, the class widgets is for the GUI, also calling a *.ui* file. And finally, the class logic for the operation and processing.
+
+
+Tests
+-----
+Fallowing some examples and theory, its possible to create some modules. I create some basic modules to understand the architecture, to practice py and also to practice object oriented programming. The modules are stables in different SO, and versions of 3dslicer, but if they need other extension, they may not work.
+
+
+Future
+------
+- The next step is try to handle some specific commands for call other extensions and try in this way to start to automatize the objective.
+- Is not easy to find some documentation and examples to do this, and the final result and time can be condicionate by that.

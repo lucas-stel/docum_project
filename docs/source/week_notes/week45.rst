@@ -1,0 +1,38 @@
+Week 45
+=======
+
+.. raw:: html
+   
+   <embed>
+   <div align="center"><a href='//sketchviz.com/@lucas-stel/0b3ec6338d668a32164f59f7ab873ebd'><img src='https://sketchviz.com/@lucas-stel/0b3ec6338d668a32164f59f7ab873ebd/7ccf636ae7c1c857f9842074c8004de6feb09ea4.sketchy.png' style='max-width: 100%;'></a><br/><span style='font-size: 80%;color:#555;'>Hosted on <a href='//sketchviz.com/' style='color:#555;'>Sketchviz</a></span></div>
+   <embed>
+   
+DICOM set file 
+--------------
+DICOM data set can include and represent different DICOM objects, included or supported by the standard; images, text reports, audios. The input and output volumes are files *.NRRD*.
+
+
+Output data
+-----------
+According to the process followed, the volume straightened is a file *.NRRD*, a method for storing and representation of n-dimension raster data. If we analyze the header of one volume obtained, its characterized by:
+
+- Nrrd file type: one file.
+- Dimension: 3.
+- Size: 99x99x70 (ZxWidthxHeight).
+- Type: int (acording with the NRRD documentation, its means: 4-byte integer).
+- Encoding: gzip.
+
+Working with the file .NRRD its possible to:
+- Open it with python, using the *pynrrd* package.
+- Convert it to different formats like, jpeg and variation, tiff, etc.
+- Save the file like a DICOM data set with other studies. 
+- Anonymize patient info working only with .nrrd files.
+
+
+Just curiosity
+--------------
+For the next steps:
+
+- There is a pre-processing of the input data needed?
+- There is a data set to train the model?
+- There is a model of prediction?
