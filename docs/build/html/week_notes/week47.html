@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Week 46" href="week46.html" /><link rel="prev" title="Working with sphinx" href="../notes_general/notes_general.html" />
 
     <meta name="generator" content="sphinx-5.2.3, furo 2022.09.29"/>
         <title>Week 47 - Docum Project 0.2 documentation</title>
@@ -162,7 +162,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../notes_general/notes_general.html">Working with sphinx</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Week reports</span></p>
-<ul>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Week 47</a></li>
 <li class="toctree-l1"><a class="reference internal" href="week46.html">Week 46</a></li>
 <li class="toctree-l1"><a class="reference internal" href="week45.html">Week 45</a></li>
 <li class="toctree-l1"><a class="reference internal" href="week44.html">Week 44</a></li>
@@ -211,22 +212,28 @@
 </embed><section id="devoloping-a-way-to-save-input-data-settings">
 <h2>Devoloping a way to save input data settings<a class="headerlink" href="#devoloping-a-way-to-save-input-data-settings" title="Permalink to this heading">#</a></h2>
 <p>In terms of keep all the information of the process, its was developed a way to save the input data set for a module in 3DSlicer.</p>
-<p>For that, it was created a new module following:
-- Module more complex in terms of GUI and object oriented programming; use of the library Qt and Qt Designer.
-- Application of functions for image processing using the libraries Ctk and Vtk.
-- Practice with python and experience of develop in 3dSlicer.
-- Use of git/VCS to track the develop of the py file module.</p>
+<p>For that, it was created a new module following:</p>
+<ul class="simple">
+<li><p>Module more complex in terms of GUI and object oriented programming; use of the library Qt and Qt Designer.</p></li>
+<li><p>Application of functions for image processing using the libraries Ctk and Vtk.</p></li>
+<li><p>Practice with python and experience of develop in 3dSlicer.</p></li>
+<li><p>Use of git/VCS to track the develop of the py file module.</p></li>
+</ul>
 <p>Each time when the function in the module is executed, its created a file (in this case txt) which store the input data settings established by the user. The settings in the GUI section are convert in variables in the Logic section (of the module py file). Then, this variables are stored in an array, and finally save them in a txt file (with the method ‘a+’).</p>
-<p>Two conclusions can be obtain:
-- This concept allows with the same soft, same module and same setting, replicate the process and obtain the same results.
-- Keep track of settings of each case for study and interpretation of results.</p>
+<p>Two conclusions can be obtain:</p>
+<ul class="simple">
+<li><p>This concept allows with the same soft, same module and same setting, replicate the process and obtain the same results.</p></li>
+<li><p>Keep track of settings of each case for study and interpretation of results.</p></li>
+</ul>
 </section>
 <section id="next-steps">
 <h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this heading">#</a></h2>
-<p>Now its possible to extend this concept to the modules of the major process. For that the path propose is:
-- First: understand which settings its necessary save in the GUI section.
-- Second: where are these settings in the GUI section.
-- Third: convert these settings in variables, then call them and create the txt file.</p>
+<p>Now its possible to extend this concept to the modules of the major process. For that the path propose is:</p>
+<ul class="simple">
+<li><p>First: understand which settings its necessary save in the GUI section.</p></li>
+<li><p>Second: where are these settings in the GUI section.</p></li>
+<li><p>Third: convert these settings in variables, then call them and create the txt file.</p></li>
+</ul>
 <p>The necessary modules for the major process have several files and lines; the implementation can take time.</p>
 </section>
 <section id="other-comments">
@@ -240,8 +247,26 @@
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="week46.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Week 46</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../notes_general/notes_general.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Working with sphinx</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
