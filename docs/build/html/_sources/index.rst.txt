@@ -31,6 +31,10 @@ Contents
    :titlesonly:
    :caption: Week reports
 
+   week_notes/week51
+   week_notes/week50
+   week_notes/week49
+   week_notes/week48
    week_notes/week47
    week_notes/week46
    week_notes/week45
